@@ -1,19 +1,10 @@
 ﻿using ClientiLibrary;
 using System;
-using System.Globalization;
 using System.IO;
-using System.Text;
-using System.Configuration;
 using MySql.Data.MySqlClient;
-using System.Reflection;
-using AssemblyGestore;
-using AssemblyGestoreFile;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Http;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
 using System.Collections;
 
 class Program

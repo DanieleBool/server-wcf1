@@ -1,16 +1,10 @@
 ﻿using ClientiLibrary;
-using System.Globalization;
-using System.Text;
 using System.Collections.Generic;
-//riferimenti database
 using MySql.Data.MySqlClient;
 using System.Collections;
-using MySqlX.XDevAPI;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Http;
-using System.Data.SqlClient;
-using System.Data;
 using System;
 
 namespace AssemblyGestore

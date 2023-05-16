@@ -1,20 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System;
+﻿using System;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Http;
-using AssemblyGestore;
 using AssemblyGestoreFile;
-using ClientiLibrary;
 using System.Configuration;
 using System.Reflection;
-using static System.Net.WebRequestMethods;
-using System.Runtime.ConstrainedExecution;
-using System.Management.Instrumentation;
-using System.Diagnostics;
 
 namespace Server
 {
@@ -31,10 +21,10 @@ namespace Server
             string filePercorso = ConfigurationManager.AppSettings["FileConnection"];
 
             // Carico gli assembly dinamicamente
-            //Assembly assemblyGestore = Assembly.LoadFrom(@"C:\Users\d.dieleuterio\source\repos\ProgettoFramework\ClienteSoluzione\AssemlyGestore\obj\Debug\AssemlyGestore.dll");
-            Assembly assemblyGestore = Assembly.LoadFrom(@"C:\Users\danie\source\repos\DanieleBool\Cliente_app_backend\AssemlyGestore\obj\Debug\AssemlyGestore.dll");
-            //Assembly assemblyGestoreFile = Assembly.LoadFrom(@"C:\Users\d.dieleuterio\source\repos\ProgettoFramework\ClienteSoluzione\AssemblyGestoreFile\obj\Debug\AssemblyGestoreFile.dll");
-            Assembly assemblyGestoreFile = Assembly.LoadFrom(@"C:\Users\danie\source\repos\DanieleBool\Cliente_app_backend\AssemblyGestoreFile\obj\Debug\AssemblyGestoreFile.dll");
+            Assembly assemblyGestore = Assembly.LoadFrom(@"C:\Users\d.dieleuterio\source\repos\DanieleBool\server-wcf1\AssemlyGestore\obj\Debug\AssemlyGestore.dll");
+            //Assembly assemblyGestore = Assembly.LoadFrom(@"C:\Users\danie\source\repos\DanieleBool\Cliente_app_backend\AssemlyGestore\obj\Debug\AssemlyGestore.dll");
+            Assembly assemblyGestoreFile = Assembly.LoadFrom(@"C:\Users\d.dieleuterio\source\repos\DanieleBool\server-wcf1\AssemblyGestoreFile\obj\Debug\AssemblyGestoreFile.dll");
+            //Assembly assemblyGestoreFile = Assembly.LoadFrom(@"C:\Users\danie\source\repos\DanieleBool\Cliente_app_backend\AssemblyGestoreFile\obj\Debug\AssemblyGestoreFile.dll");
             //Si ottengono i tipi delle classi GestoreClienti e GestoreFileClienti dai due assembly caricati.
             Type gestoreClientiType = assemblyGestore.GetType("AssemblyGestore.GestoreClienti");
             Type gestoreFileClientiType = assemblyGestoreFile.GetType("AssemblyGestoreFile.GestoreFileClienti");
