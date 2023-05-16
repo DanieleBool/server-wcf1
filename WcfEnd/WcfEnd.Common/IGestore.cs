@@ -34,25 +34,46 @@ namespace WcfEnd.Common
     [ServiceContract]
     public interface IGestore
     {
-        [WebInvoke(Method = "POST", UriTemplate = "AggiungiCliente")]
+        //[WebInvoke(Method = "POST", UriTemplate = "AggiungiCliente")]
+        //[OperationContract]
+        //void AggiungiCliente(Cliente nuovoCliente);
+
+        //[WebGet(UriTemplate = "CercaCliente?parametroRicerca={parametroRicerca}&scelta={scelta}")]
+        //[OperationContract]
+        //ArrayList CercaCliente(string parametroRicerca, string scelta);
+
+        //[WebInvoke(Method = "PUT", UriTemplate = "ModificaCliente/{id}")]
+        //[OperationContract]
+        //void ModificaCliente(string id, Cliente clienteModificato);
+
+        //[WebInvoke(Method = "DELETE", UriTemplate = "EliminaCliente/{id}")]
+        //[OperationContract]
+        //bool EliminaCliente(string id);
+
+        //[WebGet(UriTemplate = "VerificaIdUnivoco/{id}")]
+        //[OperationContract]
+        //void VerificaIdUnivoco(string id);
+
+        //[OperationContract]
+        //[WebInvoke(UriTemplate = "*", Method = "OPTIONS")]
+        //void GetOptions();
+
+
         [OperationContract]
+        [WebGet(UriTemplate = "clienti?parametroRicerca={parametroRicerca}&scelta={scelta}")]
+        Cliente[] CercaCliente(string parametroRicerca, string scelta);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "clienti", Method = "POST")]
         void AggiungiCliente(Cliente nuovoCliente);
 
-        [WebGet(UriTemplate = "CercaCliente?parametroRicerca={parametroRicerca}&scelta={scelta}")]
         [OperationContract]
-        ArrayList CercaCliente(string parametroRicerca, string scelta);
-
-        [WebInvoke(Method = "PUT", UriTemplate = "ModificaCliente/{id}")]
-        [OperationContract]
+        [WebInvoke(UriTemplate = "clienti/{id}", Method = "PUT")]
         void ModificaCliente(string id, Cliente clienteModificato);
 
-        [WebInvoke(Method = "DELETE", UriTemplate = "EliminaCliente/{id}")]
         [OperationContract]
+        [WebInvoke(UriTemplate = "clienti/{id}", Method = "DELETE")]
         bool EliminaCliente(string id);
-
-        [WebGet(UriTemplate = "VerificaIdUnivoco/{id}")]
-        [OperationContract]
-        void VerificaIdUnivoco(string id);
     }
 
 }

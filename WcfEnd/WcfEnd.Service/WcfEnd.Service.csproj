@@ -94,6 +94,10 @@
       <Project>{1cb487e8-9986-45c0-a328-9ecd0db9e921}</Project>
       <Name>AssemblyGestoreFile</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\AssemblyGestore\AssemblyGestore.csproj">
+      <Project>{f280a34e-7489-4074-868a-622f26b87c1b}</Project>
+      <Name>AssemblyGestore</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ClientiLibrary\ClientiLibrary.csproj">
       <Project>{0b8d4208-c82c-48e7-9800-dfbf34ed21b4}</Project>
       <Name>ClientiLibrary</Name>
