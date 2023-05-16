@@ -15,7 +15,6 @@ using System.Configuration;
 
 namespace WcfEnd.Service
 {
-
     public class GestoreService : IGestore
     {
         private readonly IGestoreC _gestoreC;
