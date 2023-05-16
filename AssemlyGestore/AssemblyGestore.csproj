@@ -7,8 +7,8 @@
     <ProjectGuid>{F280A34E-7489-4074-868A-622F26B87C1B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AssemlyGestore</RootNamespace>
-    <AssemblyName>AssemlyGestore</AssemblyName>
+    <RootNamespace>AssemblyGestore</RootNamespace>
+    <AssemblyName>AssemblyGestore</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
