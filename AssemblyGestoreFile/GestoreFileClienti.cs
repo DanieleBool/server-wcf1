@@ -13,6 +13,7 @@ using System.Collections;
 
 namespace AssemblyGestoreFile
 {
+    [Serializable]
     public class GestoreFileClienti : MarshalByRefObject, IGestoreC
     {
         // Campo privato che memorizza il percorso del file dei clienti

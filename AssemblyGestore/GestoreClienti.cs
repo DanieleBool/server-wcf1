@@ -9,6 +9,7 @@ using System;
 
 namespace AssemblyGestore
 {
+    [Serializable]
     public class GestoreClienti : MarshalByRefObject, IGestoreC // MarshalByRefObject è utilizzata per creare oggetti remoti
     {
         private string _connectionDB;
