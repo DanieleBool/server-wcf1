@@ -176,11 +176,11 @@ namespace AssemblyGestore
             }
             catch (MySqlException ex)
             {
-                Console.WriteLine("Si è verificato un errore durante la modifica del cliente: " + ex.Message);
+                throw new InvalidOperationException("Si è verificato un errore durante la modifica del cliente: " + ex.Message);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Si è verificato un errore sconosciuto durante la modifica del cliente: " + ex.Message);
+                throw new InvalidOperationException("Non è possibile modificare il cliente: " + ex.Message);
             }
         }
 

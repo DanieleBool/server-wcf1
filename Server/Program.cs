@@ -5,6 +5,7 @@ using System.Runtime.Remoting.Channels.Http;
 using AssemblyGestoreFile;
 using System.Configuration;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace Server
 {
@@ -21,9 +22,9 @@ namespace Server
             string filePercorso = ConfigurationManager.AppSettings["FileConnection"];
 
             // Carico gli assembly dinamicamente
-            Assembly assemblyGestore = Assembly.LoadFrom(@"C:\Users\d.dieleuterio\source\repos\DanieleBool\server-wcf1\AssemblyGestore\obj\Debug\AssemblyGestore.dll");
+            Assembly assemblyGestore = Assembly.LoadFrom(@"C:\Users\d.dieleuterio\source\repos\server-wcf1\AssemblyGestore\obj\Debug\AssemblyGestore.dll");
             //Assembly assemblyGestore = Assembly.LoadFrom(@"C:\Users\danie\source\repos\DanieleBool\Cliente_app_backend\AssemlyGestore\obj\Debug\AssemlyGestore.dll");
-            Assembly assemblyGestoreFile = Assembly.LoadFrom(@"C:\Users\d.dieleuterio\source\repos\DanieleBool\server-wcf1\AssemblyGestoreFile\obj\Debug\AssemblyGestoreFile.dll");
+            Assembly assemblyGestoreFile = Assembly.LoadFrom(@"C:\Users\d.dieleuterio\source\repos\server-wcf1\AssemblyGestoreFile\obj\Debug\AssemblyGestoreFile.dll");
             //Assembly assemblyGestoreFile = Assembly.LoadFrom(@"C:\Users\danie\source\repos\DanieleBool\Cliente_app_backend\AssemblyGestoreFile\obj\Debug\AssemblyGestoreFile.dll");
             //Si ottengono i tipi delle classi GestoreClienti e GestoreFileClienti dai due assembly caricati.
             Type gestoreClientiType = assemblyGestore.GetType("AssemblyGestore.GestoreClienti");
